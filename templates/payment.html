@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+
+
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({% static 'images/bg-title-page-02.jpg' %});">
+    <h2 class="tit6 t-center">
+        PayMent Page
+    </h2>
+</section>
+
+
+
+<!-- Contact form -->
+<section class="section-contact bg1-pattern p-t-90 p-b-113">
+    
+    <div class="col-lg-4">
+        
+      <a href="{% url 'invoice' %}">View Your Recipt</a>
+
+    </div>
+    
+
+    </section>
+
+{% endblock %}

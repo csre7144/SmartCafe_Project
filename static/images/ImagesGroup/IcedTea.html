@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Coffee Items</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">our daily posts</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Iced Coffee/1.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Iced Coffee/2.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Iced Coffee/3.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Iced Coffee/4.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Cold Drinks/5.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Cold Drinks/6.avif" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Cold Drinks/7.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="Images/Cold Drinks/8.webp" alt="">
+         </div>
+         <div class="content">
+            <h3>blog title goes here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
+            <a href="#" class="btn">read more</a>
+            
+         </div>
+      </div>
+      
+   </div>
+
+   <div id="load-more"> load more </div>
+
+</div>
+
+<script>
+
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+
+loadMoreBtn.onclick = () =>{
+   let boxes = [...document.querySelectorAll('.container .box-container .box')];
+   for (var i = currentItem; i < currentItem + 3; i++){
+      boxes[i].style.display = 'inline-block';
+   }
+   currentItem += 3;
+
+   if(currentItem >= boxes.length){
+      loadMoreBtn.style.display = 'none';
+   }
+}
+
+</script>
+
+</body>
+</html>
